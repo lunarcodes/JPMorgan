@@ -1,6 +1,6 @@
 # JPMorgan
 Trade
-Problem Statement : 
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+)  <b>Problem Statement : </b>
 
 As an investment bank we have a requirement to maintain the total quantity of a traded security held at
 any point in time, this is referred to as a real time position.
@@ -17,22 +17,27 @@ Account Number – Account used to purchase shares, string
 Operation – NEW/AMEND/CANCEL
 
 
-Solution Approach :
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+)<b><font color="red"> Solution Approach :</font><b>
 
---> All trade Events are considered as each command, it will drive its own logic to calculate the trade postion and perform calculation based on the existing trade datas.
+ <b>Tech Stack : </b>Java 1.7,junit,log4j</br>
 
-CommandFactory : Factory class for all the commands
-TradeCommand : Based on the trade events the corresponding TradeCommand class will get called.
-TradeStore : This class calculate the trade position and add all the trades in the collection
-SumQuantityCommand : Abstact class for Adding the Trades
-DiffQuantityCommand ;Abstract class for finding the diff between the trades
-TradeCalculatorCommand: Base inetrface for all the trade commands
-Trade : Model class for Trade
+--> All trade Events are considered as each command, it will drive its own logic bassed on Direction and operation of trade 
+to calculate the trade postion  baseand perform calculation based on the existing trade datas.
 
-TradeTest.java : Contain all the test cases for each account , you can run account wise individually or you can run the entire test case method [TradeBuildTest]
-To keep it simple i build the Trade object statically from the input values .
+<b>CommandFactory</b> : Factory class for all the commands</br>
+<b>TradeCommand </b> : Based on the trade events the corresponding TradeCommand class will get called.</br>
+<b>TradeStore </b> : This class calculate the trade position and add all the trades in the collection</br>
+<b>SumQuantityCommand</b>  : Abstact class for Adding the Trades</br>
+<b>DiffQuantityCommand </b> ;Abstract class for finding the diff between the trades</br>
+<b>TradeCalculatorCommand</b> : Base inetrface for all the trade commands</br>
+<b>Trade </b> : Model class for Trade</br>
+
+<b>TradeTest.java</b>  : Contain all the test cases for each account , you can run account wise individually or you can run the entire test case method [TradeBuildTest]
+To keep it simple i build the Trade object statically from the input values .</br>
 
 
-// To keep the solution simple i created  manual input of streaming trades like this and build the trade
-// we can use filereader to read a file of trades and use concurrentAccountHashMap/Blocking Queue for processing 
-TradeMain.java : stanalone java to test input with respect to output.
+// To keep the solution simple i created  manual input of streaming trades  and build the trade
+// we can use filereader to read a file of trades and use concurrentAccountHashMap/Blocking Queue for processing </br>
+<b>TradeMain.java </b> : stanalone java to test input with respect to output.</br>
+
+
