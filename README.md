@@ -17,12 +17,11 @@ Account Number – Account used to purchase shares, string
 Operation – NEW/AMEND/CANCEL
 
 
-![#c5f015](https://placehold.it/15/c5f015/000000?text=+)<b><font color="red"> Solution Approach :</font><b>
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+)<b> Solution Approach :</b>
 
- <b>Tech Stack : </b>Java 1.7,junit,log4j</br>
+ <b>Tech Stack : </b>Java 1.7,junit 4.8.2,log4j 1.2.17</br>
 
---> All trade Events are considered as each command, it will drive its own logic bassed on Direction and operation of trade 
-to calculate the trade postion  baseand perform calculation based on the existing trade datas.
+<b>Algorithm :</b> All trade Events are considered as each command, it will drive its own logic bassed on Direction and operation of trade to calculate the trade postion  baseand perform calculation based on the existing trade datas.
 
 <b>CommandFactory</b> : Factory class for all the commands</br>
 <b>TradeCommand </b> : Based on the trade events the corresponding TradeCommand class will get called.</br>
@@ -40,4 +39,4 @@ To keep it simple i build the Trade object statically from the input values .</b
 // we can use filereader to read a file of trades and use concurrentAccountHashMap/Blocking Queue for processing </br>
 <b>TradeMain.java </b> : stanalone java to test input with respect to output.</br>
 
-
+<b>Trade_class : </b> contains class diagram and relationship hierarchy between command objects path :\src\main\resources\Trade _class.gif
